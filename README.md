@@ -13,7 +13,7 @@
 > * [Process and pipeline](#pipe)
 > * [Fonts etc](#font)
 
-## <a name="intro">Introduction</a>
+## <a id="intro">Introduction</a>
 
 **This document may contain spoilers for Tail Concerto.**
 
@@ -27,7 +27,7 @@ Now that I’ve finished everything, I also suspect that I might’ve done something
 
 Further along this file, I describe in detail the process that turns the assets included here into a working prototype. A copy of both the Japanese and the American ROMs will be needed.
 
-## <a name="rom">ROM structure</a>
+## <a id="rom">ROM structure</a>
 
 The Tail Concerto ROMs have a fairly simple structure, with only five main files: `SYSTEM.CNF`, which is a file required in every PSX game; a PSX executable named after the specific version’s product code; `DATA.BIN`, which contains the bulk of the game; `XA.BIN`, which contains all voiced lines from in-game cutscenes and BGM; and `STR.BIN` (named `STRA.BIN` in the American version), which contains all FMVs. The only files relevant to us are `XA.BIN` and `STR(A).BIN`.
 
@@ -57,7 +57,7 @@ The video container files are best described in table form:
 
 Since they were published by Bandai only, its Japanese and French counterpart, `STR.BIN`, does not include video 13. Because of that, the intro movie is called video 13 in their ROMs. In this document and in the assets alike, we are going to use the numbers from the American ROM, so the intro movie is video 14 for us.
 
-## <a name="req">Required software</a>
+## <a id="req">Required software</a>
 
 ### jPSXdec
 
@@ -66,7 +66,7 @@ Since they were published by Bandai only, its Japanese and French counterpart, `
 
 This is the main hacking tool for this project. I’ve tried to use numerous programs of varying age and mojibake, but this is the only one that in the end of the day managed to do the job. It has a GUI for basic stuff and uses the CLI for advanced options. **Requires Java.**
 
-## <a name="soft">Other software</a>
+## <a id="soft">Other software</a>
 
 ### ffmpeg
 
@@ -93,7 +93,7 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 > 
 > In addition to these, I also used a video editor, an audio editor and a graphics editor, but the tasks are so mundane pretty much anything will do — a proof of that is that the video editor I used was none other than [Windows Live Movie Maker 2012](https://archive.org/details/wlsetup-all_201802).
 
-## <a name="assets">Assets</a>
+## <a id="assets">Assets</a>
 
 * **`12`**  
   All assets pertaining to my substitution of video 12 (originally Bandai intro). Included mostly for completion’s sake.
@@ -102,7 +102,7 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 * **`ass`**  
   Subtitle files for all FMVs. Video 8 has no spoken lines.
 * **`automation`**
-    * **`automation\\*.xml`**  
+    * **`automation\*.xml`**  
 	  jPSXdec XML files for automatic frame injection.
 	* **`automation\frameren.cmd`**  
 	  When decomposing a video file into its individual frames, ffmpeg starts numbering at 001, while jPSXdec starts at 0. This utility will rename all numbered BMP files in the same directory to one number below. Starts working at frame 100. Keep an eye at the highest-numbered frame as it runs; when it drops one number, you know you can close it.
@@ -119,7 +119,7 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 * **README.md**  
   This very document.
 
-## <a name="pipe">Process and pipeline</a>
+## <a id="pipe">Process and pipeline</a>
 
 First of all: while I’m going to give out command syntaxes here, I highly recommend you to read the jPSXdec documentation. It is very interesting and enlightening; these are but a small fraction of the tools it stores under its hood.
 
@@ -167,7 +167,7 @@ The last step is to transplant the videos, sound and all, to the US ROM. Open bo
 
 That should be it! If you have any questions, comments, or just want to talk about anything in particular, send me a PM on the Romhacking.net forums or email me at the address I included in the undub’s release notes! I did my best to try and explain the process with words, but that was about as tricky as it was to come up with it :)
 
-## <a name="font">Fonts etc</a>
+## <a id="font">Fonts etc</a>
 
 As ASS subtitles include font metadata, all provided subtitles require Arial and Arial Italic. The Japanese/English subs for video 14 (intro/music video) also require Yu Gothic UI. All these fonts are included by default in Windows 10 as far as I know.
 
