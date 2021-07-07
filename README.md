@@ -112,11 +112,11 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 	  Run it on the jPSXdec directory to automatically substitute all sound files in the ROM for the WAV files in the directory. Starts at sound 19 (i.e. the first that corresponds to a voiced line). **You will need to change this script for it to work:** as it is, it looks for the specific name of my index file. Be aware that the index number of the sound files might change depending on how you fiddle with the BIN! Change the initial value of the %POINTER% variable if needed.
 * **`transcripts`**  
   Transcriptions of the American dub of each FMV, followed by transcriptions of the French subs, usually followed by drafts of the subs in the final project. Included mostly to help possible translation projects.
-* **garfunkel.7z**  
+* **`garfunkel.7z`**  
   Sounds of Silence. (All voiced lines, muted with Audacity.)
-* **headers.txt**  
+* **`headers.txt`**  
   The first 0x40 bytes of each STR in the North American ROM.
-* **README.md**  
+* **`README.md`**  
   This very document.
 
 ## Process and pipeline
