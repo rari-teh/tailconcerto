@@ -126,6 +126,7 @@ First of all: while I’m going to give out command syntaxes here, I highly recomm
 Before we start mucking about in the hex editor, we should first do all interventions in the American ROM that require us to let jPSXdec touch it directly: replacing the voiced lines. Open jPSXdec and generate index files for both the American and Japanese ROMs, saving them in the jPSXdec directory. Place the audio files in WAV format to substitute in the same directory.
 
 > **Audio replace command syntax:**
+> 
 >     java -jar jpsxdec.jar -x index_file.idx -i index_number -replaceaudio input.wav
 
 If you’re going to inject all voiced lines in one go, you can use the included `replaceaudio.cmd` script – just be sure to edit its contents to match your index file and the index number of track 19.
@@ -135,6 +136,7 @@ Now, to substituting videos. Video streams are changed on a frame-by-frame basis
 If you’re going to change Bandai and Atlus’ intros, this is the time. Place `12.wav` and `13.wav` on the jPSXdec directory and run the above audio replace command, using the index numbers of the 12.0 and 13.0 audio streams. Next, copy over the frames for video 12 and `12.xml` and use the following command:
 
 > **Video frame replace command syntax:**
+> 
 >     java -jar jpsxdec.jar -x index_file.idx -i index_number -replaceframes input.xml
 
 Remove all BMP and PNG files from the jPSXdec folder and repeat the process with video 13.
@@ -148,6 +150,7 @@ After you subtitle the videos, the process of baking the subs into the video str
 Put both the video and its subtitles on ffmpeg’s directory. The command for turning them into open subtitles is as follows:
 
 > **Subtitle burning command syntax:**
+> 
 >     ffmpeg -i input.avi -vf "ass=input.ass" -vcodec mjpeg -b:v 6M -acodec pcm_s16le -b:a 605k output.avi
 
 Now, I know what you’re probably thinking: why motion JPEG if we’re working with the finest quality possible? Simple but sad: unfortunately, ffmpeg’s encoders for motion BMP and motion PNG, which would in theory be the superior formats here, are broken beyond use. BMP yields completely corrupted video streams, and PNG fuzzes the image in an odd way that is very apparent every time there is a fine line onscreen. According to the jPSXdec documentation, the PlayStation FMV format, STR, is actually based on MJPEG and most of the times yields frames that are completely identical to it, making it the best lossy choice. For the quality to hold, though, you’ll have to mind the bitrate: since, when exporting the FMVs into highest quality MJPEG, the highest it goes is a bit over 5 Mbps, exporting everything with a 6 Mbps video stream should safely produce the best image possible within these limits. As for the audio codec and bitrate, they don’t really matter, as the only thing from this video that will make its way into the ROMs are the frames.
@@ -155,6 +158,7 @@ Now, I know what you’re probably thinking: why motion JPEG if we’re working with
 After baking the open subs, create a subfolder to dump the frames in and use ffmpeg again:
 
 > **Frames dumping command syntax:**
+> 
 >     ffmpeg -i input.avi folder\%03d.bmp
 
 Delete by hand all frames that do not include a subtitle, as those won’t need to be injected again, lest we lose a bit of image quality.
