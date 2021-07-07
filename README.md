@@ -5,15 +5,15 @@
 
 > ## Table of Contents
 > 
-> * [Introduction](#intro)
-> * [ROM structure](#rom)
-> * [Required software](#req)
-> * [Other software](#soft)
+> * [Introduction](#introduction)
+> * [ROM structure](#rom-structure)
+> * [Required software](#required-software)
+> * [Other software](#other-software)
 > * [Assets](#assets)
-> * [Process and pipeline](#pipe)
-> * [Fonts etc](#font)
+> * [Process and pipeline](#process-and-pipeline)
+> * [Fonts etc](#fonts-etc)
 
-## <a id="intro">Introduction</a>
+## Introduction
 
 **This document may contain spoilers for Tail Concerto.**
 
@@ -27,7 +27,7 @@ Now that I’ve finished everything, I also suspect that I might’ve done something
 
 Further along this file, I describe in detail the process that turns the assets included here into a working prototype. A copy of both the Japanese and the American ROMs will be needed.
 
-## <a id="rom">ROM structure</a>
+## ROM structure
 
 The Tail Concerto ROMs have a fairly simple structure, with only five main files: `SYSTEM.CNF`, which is a file required in every PSX game; a PSX executable named after the specific version’s product code; `DATA.BIN`, which contains the bulk of the game; `XA.BIN`, which contains all voiced lines from in-game cutscenes and BGM; and `STR.BIN` (named `STRA.BIN` in the American version), which contains all FMVs. The only files relevant to us are `XA.BIN` and `STR(A).BIN`.
 
@@ -57,7 +57,7 @@ The video container files are best described in table form:
 
 Since they were published by Bandai only, its Japanese and French counterpart, `STR.BIN`, does not include video 13. Because of that, the intro movie is called video 13 in their ROMs. In this document and in the assets alike, we are going to use the numbers from the American ROM, so the intro movie is video 14 for us.
 
-## <a id="req">Required software</a>
+## Required software
 
 ### jPSXdec
 
@@ -66,7 +66,7 @@ Since they were published by Bandai only, its Japanese and French counterpart, `
 
 This is the main hacking tool for this project. I’ve tried to use numerous programs of varying age and mojibake, but this is the only one that in the end of the day managed to do the job. It has a GUI for basic stuff and uses the CLI for advanced options. **Requires Java.**
 
-## <a id="soft">Other software</a>
+## Other software
 
 ### ffmpeg
 
@@ -93,7 +93,7 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 > 
 > In addition to these, I also used a video editor, an audio editor and a graphics editor, but the tasks are so mundane pretty much anything will do — a proof of that is that the video editor I used was none other than [Windows Live Movie Maker 2012](https://archive.org/details/wlsetup-all_201802).
 
-## <a id="assets">Assets</a>
+## Assets
 
 * **`12`**  
   All assets pertaining to my substitution of video 12 (originally Bandai intro). Included mostly for completion’s sake.
@@ -119,7 +119,7 @@ GUI hex editor with tabs. Use the 64-bit version if you can, as we’re dealing wi
 * **README.md**  
   This very document.
 
-## <a id="pipe">Process and pipeline</a>
+## Process and pipeline
 
 First of all: while I’m going to give out command syntaxes here, I highly recommend you to read the jPSXdec documentation. It is very interesting and enlightening; these are but a small fraction of the tools it stores under its hood.
 
@@ -167,7 +167,7 @@ The last step is to transplant the videos, sound and all, to the US ROM. Open bo
 
 That should be it! If you have any questions, comments, or just want to talk about anything in particular, send me a PM on the Romhacking.net forums or email me at the address I included in the undub’s release notes! I did my best to try and explain the process with words, but that was about as tricky as it was to come up with it :)
 
-## <a id="font">Fonts etc</a>
+## Fonts etc
 
 As ASS subtitles include font metadata, all provided subtitles require Arial and Arial Italic. The Japanese/English subs for video 14 (intro/music video) also require Yu Gothic UI. All these fonts are included by default in Windows 10 as far as I know.
 
