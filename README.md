@@ -2,6 +2,7 @@
 
 *Last update: July 2021*  
 [[RHDN thread](https://www.romhacking.net/forum/index.php?topic=33068)]
+[[patch download](https://www.mediafire.com/file/pdi5s2vurbwa42s/Tail_Concerto_undub_1.0a.7z/file)]
 
 > ## Table of Contents
 > 
