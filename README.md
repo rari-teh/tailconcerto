@@ -1,7 +1,7 @@
 # Tail Concerto Undub: Assets and Devnotes
 
 *Last update: July 2021*  
-[[RHDN project page](about:blank)]
+[[RHDN thread](https://www.romhacking.net/forum/index.php?topic=33068)]
 
 > ## Table of Contents
 > 
