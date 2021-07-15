@@ -38,23 +38,23 @@ The video container files are best described in table form:
 
 ### `STRA.BIN` (America)
 
-| Video | Title in Waffle’s bed               | Notes                                       |
-|-------|-------------------------------------|---------------------------------------------|
-| 0     | 2\. Memory of Dreams                | First FMV (Waffle gifts Alicia the pendant) |
-| 1     | 3\. Prairie, Our Home               |                                             |
-| 2     | 4\. Enter the Three Sisters         |                                             |
-| 3     | 5\. Imprisonment of Princess Terria |                                             |
-| 4     | 6\. To Prairia Castle               | Aerial view of Prairia; no spoken lines     |
-| 5     | 7\. The Legend of the Iron Giant    |                                             |
-| 6     | 8\. Spying on the Enemy             |                                             |
-| 7     | 9\. Two Civilizations               |                                             |
-| 8     | 10\. The Pendant                    | No spoken lines (Alicia holds the pendant)  |
-| 9     | 11\. Resurrection of the Iron Giant |                                             |
-| 10    | 12\. The Attack                     |                                             |
-| 11    | 13\. A New Day                      | Game ending                                 |
-| 12    | N/A                                 | Bandai intro                                |
-| 13    | N/A                                 | Atlus intro                                 |
-| 14    | 1\. Opening Movie                   | KOKIA’s “For little tail” M/V (intro movie) |
+| Video | Title in Waffle’s bed               | Notes                                            |
+|-------|-------------------------------------|--------------------------------------------------|
+| 0     | 2\. Memory of Dreams                | Intro cutscene (Waffle gifts Alicia the pendant) |
+| 1     | 3\. Prairie, Our Home               |                                                  |
+| 2     | 4\. Enter the Three Sisters         |                                                  |
+| 3     | 5\. Imprisonment of Princess Terria |                                                  |
+| 4     | 6\. To Prairia Castle               | Aerial view of Prairia; no spoken lines          |
+| 5     | 7\. The Legend of the Iron Giant    |                                                  |
+| 6     | 8\. Spying on the Enemy             |                                                  |
+| 7     | 9\. Two Civilizations               |                                                  |
+| 8     | 10\. The Pendant                    | No spoken lines (Alicia holds the pendant)       |
+| 9     | 11\. Resurrection of the Iron Giant |                                                  |
+| 10    | 12\. The Attack                     |                                                  |
+| 11    | 13\. A New Day                      | Game ending                                      |
+| 12    | N/A                                 | Bandai intro                                     |
+| 13    | N/A                                 | Atlus intro                                      |
+| 14    | 1\. Opening Movie                   | KOKIA’s “For little tail” M/V (intro movie)      |
 
 Since they were published by Bandai only, its Japanese and French counterpart, `STR.BIN`, does not include video 13. Because of that, the intro movie is called video 13 in their ROMs. In this document and in the assets alike, we are going to use the numbers from the American ROM, so the intro movie is video 14 for us.
 
